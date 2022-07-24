@@ -1,7 +1,12 @@
 package com.example.activityresultlauncher;
 
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -29,5 +34,21 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("number2", 2);
 
     }
+
+
+    ActivityResultLauncher<Intent> secondActivityResultLauncher = registerForActivityResult(
+            new ActivityResultContracts.StartActivityForResult(),
+            result -> {
+
+                if (result.getResultCode() == Activity.RESULT_OK) {
+
+                    Intent data = result.getData();
+
+                    int operationResult = data.getIntExtra("2x2", 0);
+
+                }
+
+            }
+    );
 
 }
