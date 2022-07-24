@@ -11,6 +11,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -47,6 +48,8 @@ public class MainActivity extends AppCompatActivity {
                     Intent data = result.getData();
 
                     int operationResult = data.getIntExtra("2x2", 0);
+
+                    Toast.makeText(this, operationResult + "", Toast.LENGTH_LONG).show();
 
                 }
 
