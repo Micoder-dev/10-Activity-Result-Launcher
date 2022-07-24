@@ -33,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, SecondActivity.class);
         intent.putExtra("number2", 2);
 
+        secondActivityResultLauncher.launch(intent);
+
     }
 
 
