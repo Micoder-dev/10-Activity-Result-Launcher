@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".SecondActivity">
 
     <Button
-        android:id="@+id/btnSendData"
+        android:id="@+id/btnSendDataBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Send Number 2"
+        android:text="Send back the result of 2 x 2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
