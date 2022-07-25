@@ -107,5 +107,5 @@ jobs:
       - name: Upload APK
         uses: actions/upload-artifact@v2
         with:
-          name: ActivityResultLauncher
+          name: ActivityResultLauncherAPK
           path: app/build/outputs/apk/debug/**.apk
